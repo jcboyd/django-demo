@@ -1,7 +1,132 @@
-li a {
-        color: green;
-    }
-
 body {
-        background: white url("images/background.gif") no-repeat right bottom;
-    }
+    font-family:"Comic Sans MS";
+    background-color:white;
+}
+
+#background-image {
+    position:fixed;
+    bottom:50px;
+    right:20px;
+    opacity:0.1;
+    height:200px;
+}
+
+
+#site-icon {
+    height:20px;
+}
+
+#site-icon:hover {
+    transform: scale(1.1);
+}
+
+#header {
+    height:40px;
+    margin-bottom: 80px;
+}
+
+#header ul { list-style:none; text-align:center; border-top:1px solid black; border-bottom:1px solid black; padding:10px 0; }
+#header ul li { display:inline; text-transform:uppercase; padding:0 10px; letter-spacing:10px; }
+#header ul li a { text-decoration:none; color:black; }
+#header ul li a:hover { text-decoration:underline; }
+
+#footer {
+    height:80px;
+}
+
+#social-list {
+    width:550px;
+    padding:0;
+    margin-right: auto;     /*centres in compliant browsers*/
+    margin-left: auto;      /* "  " */
+    list-style:none;
+    border-top:1px solid black; 
+    padding:10px 0px;
+}
+
+#social-list span {
+    padding-top:10px;
+    float:left;
+}
+
+#social-list li {
+    display:inline;
+    text-transform:uppercase;
+    padding:0 10px;
+    letter-spacing:10px;
+    float:left;
+    list-style:none;
+    margin-left:5px;
+}
+
+#social-list li a { text-decoration:none; color:black; }
+#social-list li a:hover { text-decoration:underline; }
+
+.social-icon {
+    height:40px;
+}
+
+.social-icon:hover { 
+    transform: scale(1.1);
+}
+
+#content {
+    margin-bottom: 100px;
+    text-transform:uppercase;
+}
+
+/*div {
+    padding:0px;
+    margin:0px;
+}*/
+
+#content ul, ol {
+    width: 400px;
+    margin-right: auto;/*centres in compliant browsers*/
+    margin-left: auto;/* "  " */
+    text-align: left;
+}
+
+#content h1 {
+    width:400px;
+    margin-right: auto;/*centres in compliant browsers*/
+    margin-left: auto;/* "  " */
+    color:black;
+}
+
+#content ul, ol {
+    font-style:italic;
+    /*font-family:Georgia, Times, serif;*/
+    font-size:24px;
+    color:black;
+}
+
+#content ol li p {
+    padding:8px;
+    font-style:normal;
+    /*font-family:Arial;*/
+    font-size:20px;
+    color:black;
+    border-left:
+    1px solid #999;
+}
+
+#content ol li p em {
+    display:block;
+}
+
+
+#content li a {
+  text-decoration: none;
+  color: black;
+}
+
+#content li p a:hover {
+    text-decoration:underline;
+    /* color: #7FDBFF;*/
+}
+
+#content li p a:active  {
+  /* transition: color .05s;*/
+  color: black;
+}
