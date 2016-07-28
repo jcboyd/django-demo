@@ -33,6 +33,6 @@ $ pip list
 
 This list can be exported and used to install all project dependencies elsewhere.
 
-This demo began with the *polling* application in the official Django tutorial ([docs.djangoproject.com/en/1.9/intro/tutorial01/](https://docs.djangoproject.com/en/1.9/intro/tutorial01/)) and applied stylesheets and extends its functionality with some new views and some Javascript. In particular, the primitive results section is replaced with an animated *D3* (data-drive documents) ([https://d3js.org/](https://d3js.org/)) bar chart.
+This demo begins with the *polling* application in the official Django tutorial ([docs.djangoproject.com/en/1.9/intro/tutorial01/](https://docs.djangoproject.com/en/1.9/intro/tutorial01/)) as a base and applies stylesheets and extends its functionality with some new views and some Javascript. In particular, the primitive results section is replaced with an animated *D3* (data-drive documents) ([https://d3js.org/](https://d3js.org/)) bar chart.
 
 ![Front page screenshot](http://jcboyd.github.io/django-demo/django-demo-1.png)
