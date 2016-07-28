@@ -1,18 +1,21 @@
 <html>
     <body>
         {% load staticfiles %}
-        <img id="background-image" src="{% static 'polls/images/question-icon.png' %}"/></a>
-        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+        <img id="background-image" 
+            src="{% static 'polls/images/question-icon.png' %}"/>
+        </a>
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'polls/style.css' %}" />
         <!-- header code -->
         <div id="header">
             <ul>
             <li>
-                <a href="{% url 'polls:index' %}">
-                <img id="site-icon" 
-                src="{% static 'polls/images/question-icon.png' %}"/></a>
+                <a href="{% url 'polls:index' %}"><img id="site-icon" 
+                    src="{% static 'polls/images/question-icon.png' %}"/>
+                </a>
             </li>
             <li><a href="{% url 'polls:index' %}">Home</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="{% url 'polls:about' %}">About</a></li>
               <li><a href="#">Contact</a></li>
            </ul>
         </div>
@@ -28,20 +31,17 @@
                     <span>Connect with us:</span>
                 </li>
                 <li>
-                    <a href="http://www.facebook.com">
-                        <img class="social-icon" 
+                    <a href="http://www.facebook.com"><img class="social-icon" 
                         src="{% static 'polls/images/facebook-logo.png' %}"/>
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.twitter.com">
-                        <img class="social-icon" 
+                    <a href="http://www.twitter.com"><img class="social-icon" 
                         src="{% static 'polls/images/twitter-logo.png' %}"/>
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.youtube.com">
-                        <img class="social-icon" 
+                    <a href="http://www.youtube.com"><img class="social-icon" 
                         src="{% static 'polls/images/youtube-logo.png' %}"/>
                     </a>
                 </li>
