@@ -3,11 +3,6 @@ body {
     background-color:white;
 }
 
-.chart rect {
-    stroke: none;
-    fill: #f69525;
-}
-
 #background-image {
     position:fixed;
     bottom:50px;
@@ -104,11 +99,20 @@ body {
     text-transform:uppercase;
 }
 
-#content ul, ol, form {
+#content ul, ol, form, #results {
     width: 400px;
     margin-right: auto;
     margin-left: auto;
     text-align: left;
+}
+
+#results {
+    height:350px;
+}
+
+.chart rect {
+    stroke: none;
+    fill: black;
 }
 
 #content h1 {

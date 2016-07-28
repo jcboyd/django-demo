@@ -5,6 +5,8 @@ from django.views import generic
 from django.utils import timezone
 from django.template import loader
 
+import json
+
 from .models import Choice, Question  # i.e. models.py, in the current package (./)
 
 
@@ -36,6 +38,26 @@ class ResultsView(generic.DetailView):
     template_name = 'polls/results.html'
 
 
+def results(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    choices = question.choice_set.all()
+
+    total_votes = sum([choice.votes for choice in choices])
+    proportions = [1. * choice.votes / total_votes for choice in choices]
+    labels = [choice.choice_text for choice in choices]
+
+    context = {
+        'question_text' : question.question_text,
+        'proportions' : proportions,
+        'labels' : json.dumps(labels)}
+
+    return render(request, 'polls/results.html', context)
+
+
+def about(request):
+    return render(request, 'polls/about.html', {})
+
+
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
@@ -54,6 +76,3 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
-
-def about(request):
-    return render(request, 'polls/about.html', {})

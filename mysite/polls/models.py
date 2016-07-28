@@ -21,9 +21,6 @@ class Question(models.Model):
         was_published_recently.boolean = True
         was_published_recently.short_description = 'Published recently?'
 
-    def get_total_votes(self):
-        return sum([choice.votes for choice in self.choice_set.all()])
-
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
